@@ -1,13 +1,9 @@
 module.exports = async request => {
-  // Log the request to the console.
-  console.log('Request:');
-  console.dir(request);
 
   let responseBody = `
     <html>
       <body>
-        <h4>Woot!</h4>
-        <p>Try this: <a href="hi">hi</a>. It will echo "hi" back to you!</p>
+        <p>Hello world!</p>
       </body>
     </html>
   `;
@@ -20,6 +16,7 @@ module.exports = async request => {
     },
     body: responseBody
   };
-
-  return response;
+  
+  //returning a response to the GET endpoint will return a response to the user
+  return response; 
 };
